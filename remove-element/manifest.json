@@ -1,0 +1,21 @@
+{
+	"manifest_version": 2,
+	"name": "Remove-Elements",
+	"version": "1.0.0",	
+	"content_scripts":
+	[
+		{
+			"matches": ["https://www.zhihu.com/*", "https://www.quora.com/*", "http://www.imooc.com/*", "https://www.imooc.com/*"],
+			"js": ["js/jquery-1.7.1.min.js", "js/removeMedias.js"],
+			"css": [],
+			"run_at": "document_idle"
+		}
+	],
+	
+	"permissions": [],
+	
+	"browser_action":
+	{
+		"default_popup": "popup.html"
+	}
+}
