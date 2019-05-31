@@ -25,15 +25,24 @@ function ___removeLoginModal() {
 * 慕课网去除登陆框
 */
 var ____timer = '';
+var count = 5;
 function ___startTimer(){
 	____timer = setInterval('___removeLoginDialog()', 1000);
 }
 function ___removeLoginDialog(){	
 	$('#signin').remove();
 	$('.modal-backdrop').removeClass('modal-backdrop');
-	if (____timer) {
+	count--;
+	if (____timer && count === 0) {
 		clearInterval(____timer);
 	}
+}
+
+/**
+* 古诗文网，右侧广告去除
+*/
+function ___gushiAdsRemove(){
+	$('.right').remove();
 }
 
 // 主逻辑
@@ -51,6 +60,10 @@ switch (___hostName) {
 		
 	case "www.imooc.com":
 		___startTimer();
+		break;
+		
+	case "so.gushiwen.org":
+		___gushiAdsRemove();
 		break;
 }
 
