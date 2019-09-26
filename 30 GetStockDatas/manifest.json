@@ -1,0 +1,21 @@
+{
+	"manifest_version": 2,
+	"name": "Get-Stock-Datas",
+	"version": "1.0.0",	
+	"content_scripts":
+	[
+		{
+			"matches": ["http://webapi.cninfo.com.cn/*"],
+			"js": ["js/jquery-1.7.1.min.js", "js/startLoadData.js"],
+			"css": [],
+			"run_at": "document_idle"
+		}
+	],
+	
+	"permissions": [],
+	
+	"browser_action":
+	{
+		"default_popup": "popup.html"
+	}
+}
