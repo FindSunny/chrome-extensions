@@ -93,7 +93,7 @@ var __startYear = 2013;
 // 结束检索年
 var __endYear = 2019;
 // 季度value列表
-var __quarterList = ['M_0331', 'M_0630', 'M_0630', 'M_1231'];
+var __quarterList = ['M_0331', 'M_0630', 'M_0930', 'M_1231'];
 //设置状态为已登录
 window.localStorage.setItem('login', true);
 
