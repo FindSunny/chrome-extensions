@@ -8,7 +8,7 @@ function ___removeMediasFromResult() {
 	$('#root header, .Question-sideColumn').remove();
 	
 	// remove imgs / videos
-	$('.ListShortcut').find('figure, .RichText-video').remove();
+	$('.ListShortcut').find('figure, .RichText-video, .Pc-word').remove();
 }
 
 /**
