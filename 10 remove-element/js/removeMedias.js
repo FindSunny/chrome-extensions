@@ -5,11 +5,15 @@ var ___hostName = window.location.hostname;
 * 2019/11/07 知乎修改了Header布局，加载时需要获取header中的信息，删除 -> 隐藏。
 */
 function ___removeMediasFromResult() {
-	// remove header / ads
-	$('#root header, .Question-sideColumn').hide();
-	
-	// remove imgs / videos
-	$('.ListShortcut').find('figure, .RichText-video, .Pc-word').hide();
+
+	window.requestAnimationFrame(function () {
+		// remove header / ads
+		$('#root header, .Question-sideColumn').hide();
+		// remove imgs / videos
+		$('.ListShortcut').find('figure, .RichText-video, .Pc-word').hide();
+		// remove login modal
+		$('.Modal-closeButton').click();
+	});
 }
 
 /**
